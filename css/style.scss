@@ -1,0 +1,265 @@
+@import 'media_queries.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "monumentextend";
+    src: url("../font/monumentextended.otf");
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10, 28, 43, 0.5);
+    color: #fafafa;
+    &:before {
+        content: "";
+        background-image: url("https://images.unsplash.com/photo-1607893378714-007fd47c8719?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80");
+        background-repeat: no-repeat;
+        position: absolute;
+        background-size: cover;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 1;
+        z-index: -1;
+    }
+    .nav {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        padding: 40px 120px;
+        justify-content: space-between;
+        align-items: center;
+        @include mobileview {
+            padding: 40px 42px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-family: "monumentextend";
+            @include mobileview {
+                font-size: 1.5rem;
+            }
+        }
+        .hamburger {
+            span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;
+                border-radius: 3px;
+                z-index: 1;
+                background: #fafafa;
+                @include mobileview {
+                    width: 33px;
+                    height: 3px;
+                }
+            }
+        }
+    }
+    .outer-landing {
+        padding: 0px 120px;
+        @include mobileview {
+            padding: 0px 42px;
+        }
+        .inner-landing {
+            margin-top: 150px;
+            width: 416px;
+            height: 151px;
+            border: 2px solid #fafafa;
+            display: flex;
+            justify-content: flex-start;
+            padding: 0px 20px;
+            align-items: center;
+            @include mobileview {
+                width: 100%;
+                height: 151px;
+            }
+            h1 {
+                font-family: "monumentextend";
+                letter-spacing: 0.5rem;
+                line-height: 3rem;
+                font-size: 48px;
+                @include mobileview {
+                    font-size: 32px;
+                    letter-spacing: 0.3rem;
+                }
+            }
+        }
+        .description {
+            width: 416px;
+            margin-top: 40px;
+            @include mobileview {
+                width: 100%;
+            }
+            p {
+                font-family: "Montserrat";
+                color: rgba(250, 250, 250, 0.9);
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+.second-landing {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 120px;
+    @include mobileview {
+        margin-top: 50px;
+        padding: 0px 42px;
+    }
+    .inner-second-landing {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include mobileview {
+            flex-direction: column-reverse;
+        }
+        .descriptionmontreal {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            @include mobileview {
+                width: 100%;
+                margin-top: 20px;
+            }
+            h2 {
+                font-family: "monumentextend";
+                letter-spacing: 0.2rem;
+                color: #10112e;
+                @include mobileview {
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                font-family: "Montserrat";
+                color: #10112e;
+            }
+            .inner-description {
+                p {
+                    margin: 20px 0px;
+                    width: 462px;
+                    font-family: "Montserrat";
+                    line-height: 1.5rem;
+                    letter-spacing: 0.05rem;
+                    color: #10112e;
+                    @include mobileview {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .montrealimg {
+            img {
+                width: 455px;
+                height: 525px;
+                object-fit: cover;
+                @include mobileview {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            @include mobileview {
+                margin-top: 150px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.third-landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include mobileview {
+        width: 100%;
+        height: 100%;
+    }
+    .bgthird {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        position: absolute;
+        filter: brightness(30%) grayscale(100%);
+    }
+    .palutang {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        position: absolute;
+        right: 150px;
+        top: 100px;
+        z-index: 0;
+        filter: hue-rotate(190deg) brightness(80%);
+        @include mobileview {
+            display: none;
+        }
+    }
+    .descriptiongermany {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        color: white;
+        position: relative;
+        padding: 0px 120px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include mobileview {
+            padding: 0px 42px;
+            margin-top: 150px;
+        }
+        .inner-description {
+            width: 40%;
+            @include mobileview {
+                width: 100%;
+                margin-top: 50px;
+            }
+            h2 {
+                font-family: "monumentextend";
+                letter-spacing: 0.2rem;
+                color: #fafafa;
+                @include mobileview {
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                font-family: "Montserrat";
+                color: rgba(250, 250, 250, 0.8);
+            }
+            .inner-inner-description {
+                p {
+                    margin: 20px 0px;
+                    width: 462px;
+                    font-family: "Montserrat";
+                    line-height: 1.5rem;
+                    letter-spacing: 0.05rem;
+                    color: rgba(250, 250, 250, 0.8);
+                    @include mobileview {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
